@@ -1,2 +1,5 @@
 .vscode
 build
+
+# macOS junk files
+.DS_Store
