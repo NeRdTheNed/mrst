@@ -376,7 +376,7 @@ SF2File::SF2File(const rsnd::SoundBank *bankfile, const std::vector<WaveAudio>& 
 
       // pan
       instGenList.sfGenOper = pan;
-      int16_t panConverted = std::round(1000 * (instrInfo->pan - 64) / 64.0);
+      int16_t panConverted = std::round(500 * (instrInfo->pan - 64) / 64.0);
       instGenList.genAmount.shAmount = panConverted;
       memcpy(igenCk->data + dataPtr, &instGenList, sizeof(sfInstGenList));
       dataPtr += sizeof(sfInstGenList);
