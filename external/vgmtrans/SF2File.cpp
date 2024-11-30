@@ -494,7 +494,7 @@ SF2File::SF2File(const rsnd::SoundBank *bankfile, const std::vector<WaveAudio>& 
     assert (instrInfo != NULL);
 
     samp.dwStartloop = samp.dwStart + wav.loopStart;
-    samp.dwEndloop = samp.dwStart + wav.loopEnd;
+    samp.dwEndloop = samp.dwStart + wav.loopEnd + 1;
     samp.dwSampleRate = wav.sampleRate;
     samp.byOriginalKey = static_cast<uint8_t>(instrInfo->originalKey);
     samp.chCorrection = 0;
