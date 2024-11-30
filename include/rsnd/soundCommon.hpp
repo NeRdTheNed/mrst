@@ -68,8 +68,8 @@ struct WaveInfo {
 };
 
 inline u32 dspAddressToSamples(u32 value) {
-  // magic https://wiki.tockdom.com/wiki/BRWAV
-  return ((7 * value) + 16) / 8;
+  // magic https://github.com/soopercool101/BrawlCrate/blob/964864ef976360d3adf0bca0d875a8eb9f6e58d8/BrawlLib/SSBB/Types/Audio/RWAV.cs#L125C45-L125C79
+  return value / 16 * 14 + (value % 16 - 2);
 }
 
 void decodePcm8Block(const u8* blockData, u32 sampleCount, s16* buffer, u8 stride);
